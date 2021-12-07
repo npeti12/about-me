@@ -45,7 +45,7 @@ table {
 }
 
 
-/* ==== SEGÍTŐ SZINEK ==== */
+/* ==== SEGÍTŐ SZINEK ==== 
 
 .red {
   background-color: red;
@@ -56,7 +56,7 @@ table {
 }
 
 .green {
-  background-color: green;
+  background-color: green; */
 }
 
 /*LAYOUT MOBILE-FIRST elvek alapján*/
@@ -70,19 +70,17 @@ html {
   background-color: black;
 }
 
-body {
+.wrapper {
+  min-height: 100vh;
   width: 100vw;
-  height: 100vh;
-  position: absolute;
-  top: 0;
+  position: relative;
+  padding-bottom: 10%;
 }
 
 header {
   width: 100%;
   height: 10%;
   text-align: right;
-  padding-top: 4rem;
-  padding-right: 1rem;
   display: block;
   position: relative;
 }
@@ -93,39 +91,36 @@ header {
   font-family: 'JetBrains Mono', monospace;
   font-weight: 800;
   transition: color 0.5s ease-in-out;
+  padding-top: 2.5rem;
+  padding-right: 1rem;
 }
 
 .menu:hover {
   color: crimson;
-  
 }
 
 main {
   width: 100%;
   height: 80%;
-  position: relative;
   padding: 1rem;
   display: block;
+  position: relative;
 }
 
-.image {
-  background-image: url(assets/profilk%C3%A9p1.png);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 50%;
-  margin: 0 auto;
+img {
+  width: 100%;
   height: 40%;
+  display: block;
   transition: all 0.5s ease-in-out;
 }
 
-.image:hover {
+img:hover {
   transform: scale(1.1);
 }
 
-article {
+.article {
   width: 100%;
-  height: 55%;
+  height: 60%;
   display: block;
 }
 
@@ -142,7 +137,7 @@ p {
   margin-bottom: 1rem;
   font-family:'JetBrains Mono', monospace;
   color: white;
-  font-size: .96rem;
+  font-size: .86rem;
 }
 
 #strong {
@@ -155,13 +150,16 @@ p {
 }
 
 footer {
-  display:block;
+  display: block;
   height: 10%;
   text-align: center;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
 }
 
 footer ul {
-    padding-top: 1rem;
+  padding-top: 1rem;
   padding-bottom: 1rem;
 }
 
@@ -183,6 +181,7 @@ a {
 a:hover {
   color: crimson;
 }
+
 
 
 
