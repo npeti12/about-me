@@ -1,127 +1,197 @@
+/* CSS reset */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* ==== SEGÍTŐ SZINEK ==== */
+
+.red {
+  background-color: red;
+}
+
+.blue {
+  background-color: blue;
+}
 
 .green {
-  background-color: gren;
+  background-color: green;
 }
 
-html {
-  font-size: calc(1em + .5vw);
-  line-height: 1.5rem;
-}
+/*LAYOUT MOBILE-FIRST elvek alapján*/
 
-body {
-  padding: 0;
-  margin: 0;
-  height: 100vh;
-  max-width: 100vw;
-  display:flex;
-  flex-direction: column;
-  justify-content: space-between;
-  font-family: anton;
-  background-color: black;
-}
-
-header {
-  height: 10%;
-  display:flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items:flex-end;
-  background-color: black; 
-}
-
-footer {
-  height: 10%;
+* {
   box-sizing: border-box;
 }
 
+html {
+  font-size: 1rem;
+  background-color: black;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+}
+
+header {
+  width: 100%;
+  height: 10%;
+  text-align: right;
+  padding-top: 4rem;
+  padding-right: 1rem;
+  display: block;
+  position: relative;
+}
+
 .menu {
-  padding-top: 1%;
-  padding-right: 5%;
-  font-size: clamp(16px, 5vw, 23px);  
-  text-decoration: none;
+  display: inline-block;
   color: white;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 800;
+  transition: color 0.5s ease-in-out;
 }
 
 .menu:hover {
-  color:crimson;
-}
-
-.main-body {
-  height: 76%;
-  width: 96%;
-  margin: 2%;
-  display:flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-start;
-  background-color: black;
-  color: white;
+  color: crimson;
   
 }
 
-.background-image {
+main {
   width: 100%;
-  background-image: url('assets/profil2.jpg');
-  height: 100%;
-  background-position: right;
+  height: 80%;
+  position: relative;
+  padding: 1rem;
+  display: block;
+}
+
+.image {
+  background-image: url(assets/profilk%C3%A9p1.png);
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
-  box-shadow: 0 0 20px 20px black inset;
-  border-radius: 10%;
+  width: 50%;
+  margin: 0 auto;
+  height: 40%;
+  transition: all 0.5s ease-in-out;
+}
+
+.image:hover {
+  transform: scale(1.1);
 }
 
 article {
   width: 100%;
-  padding-right: 5%;
-  padding-left: 1%;
+  height: 55%;
+  display: block;
 }
 
 h1 {
-  font-size: clamp(8px, 5vw, 34px);
+  padding-bottom: 1rem;
+  font-size: 1.5rem;
+  color: crimson;
+  text-align: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 800;
 }
 
 p {
-  font-size: clamp(8px, 5vw, 24px);
-  line-height: 2rem;
+  margin-bottom: 1rem;
+  font-family:'JetBrains Mono', monospace;
+  color: white;
+  font-size: .96rem;
 }
 
-strong {
-   font-size: clamp(8px, 5vw, 24px);
-   font-weight: 400;
-   color:crimson;
+#strong {
+  color: crimson;
 }
 
 #name {
- text-align: right;
- font-size: clamp(8px, 5vw, 24px);
- font-weight: 400;
+  margin-bottom: 0;
+  text-align: right;
 }
 
 footer {
-  width: 33%;
-  margin: 0 auto;
+  display:block;
+  height: 10%;
+  text-align: center;
 }
 
-ul {
-  color: white;
-  list-style-type: none;
-  display:flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+footer ul {
+    padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+footer ul li {
+  display: inline;
+}
+
+.fab {
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 a {
+  text-decoration: none;
   color: white;
+  transition: color 0.5s ease-in-out;
 }
 
 a:hover {
   color: crimson;
 }
 
-.fab {
-   transition: all 0.5s ease-in-out;
-}
 
-.fab:hover {
-    transform: scale(1.1);
-}
+
+
+
+
+
+
+
+
+
+
